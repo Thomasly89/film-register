@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.FilmOversiktController">
+   <children>
+      <VBox layoutX="6.0" prefHeight="344.0" prefWidth="215.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="221.0" text="Tittel" textAlignment="CENTER" />
+            <ListView fx:id="listView" onMouseClicked="#velgFilm" prefHeight="324.0" prefWidth="213.0" />
+         </children>
+      </VBox>
+      <Label layoutX="231.0" layoutY="64.0" text="Beskrivelse" />
+      <TextField fx:id="beskrivelse" editable="false" layoutX="340.0" layoutY="19.0" prefHeight="106.0" prefWidth="215.0" />
+      <TextField fx:id="utgivelsesdato" editable="false" layoutX="340.0" layoutY="173.0" prefHeight="27.0" prefWidth="215.0" />
+      <TextField fx:id="spilletid" editable="false" layoutX="340.0" layoutY="236.0" prefHeight="27.0" prefWidth="215.0" />
+      <Label layoutX="231.0" layoutY="178.0" text="Utgivelsesdato" />
+      <Label layoutX="231.0" layoutY="241.0" text="Spilletid" />
+      <Button layoutX="351.0" layoutY="373.0" mnemonicParsing="false" onAction="#nyFilm" text="Ny" />
+      <Button layoutX="415.0" layoutY="373.0" mnemonicParsing="false" onAction="#redigerButton" text="Rediger" />
+      <Button layoutX="508.0" layoutY="373.0" mnemonicParsing="false" onAction="#slettFilm" text="Slett" />
+      <ImageView id="filmBilde" fitHeight="98.0" fitWidth="144.0" layoutX="357.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="6.0" layoutY="344.0" prefHeight="27.0" prefWidth="71.0" text="Sorter etter" />
+      <Button layoutX="77.0" layoutY="344.0" mnemonicParsing="false" onMouseClicked="#alfabetiskSynkende" text="Tittel synkende" />
+      <Button layoutY="368.0" mnemonicParsing="false" onMouseClicked="#alfabetiskStigende" text="Tittel stigende" />
+      <Button layoutX="107.0" layoutY="368.0" mnemonicParsing="false" onMouseClicked="#aarSynkende" text="År synkende" />
+      <Button layoutX="202.0" layoutY="368.0" mnemonicParsing="false" onMouseClicked="#aarStigende" text="År stigende" />
+   </children>
+</AnchorPane>
